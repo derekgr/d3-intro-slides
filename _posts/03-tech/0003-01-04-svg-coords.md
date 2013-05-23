@@ -4,6 +4,22 @@ title: SVG coordinates
 
 * default origin top-left, x-axis to the right, y-axis down
 
-<div id="svg-coordinates">
-hi!
-</div>
+<svg width="300px" height="100px" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+  <desc>Example InitialCoords - SVG's initial coordinate system</desc>
+
+  <g fill="none" stroke="white" stroke-width="3" >
+    <line x1="0" y1="1.5" x2="300" y2="1.5" />
+    <line x1="1.5" y1="0" x2="1.5" y2="100" />
+  </g>
+  <g fill="red" stroke="none" >
+    <rect x="0" y="0" width="3" height="3" />
+    <rect x="297" y="0" width="3" height="3" />
+    <rect x="0" y="97" width="3" height="3" />
+  </g>
+  <g font-size="14" fill="white">
+    <text x="10" y="20">(0,0)</text>
+    <text x="240" y="20">(300,0)</text>
+    <text x="10" y="90">(0,100)</text>
+  </g>
+</svg>
