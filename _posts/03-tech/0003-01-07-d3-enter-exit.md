@@ -2,8 +2,20 @@
 title: selections
 ---
 
-* [api reference](https://github.com/mbostock/d3/wiki/Selections)
-* data() binds data to the current selection
-* enter() creates a placeholder selection for missing dom elements
-* exit() creates a placeholder selection for dom elements with no data
-* you'll get used to it
+{% highlight javascript %}
+// select every existing rect element
+var rects = d3.selectAll("rect");
+rects.attr("fill", "blue"); // fill them all blue
+{% endhighlight %}
+
+{% highlight javascript %}
+// bind data to a selection with data()
+var example = [1,2,3];
+rects.data(example);
+{% endhighlight %}
+
+{% highlight javascript %}
+// create a placeholder selection for data points with no
+// matching DOM elements
+rects.data(example).enter();
+{% endhighlight %}
